@@ -1,0 +1,25 @@
+.modal {
+  width: 500px;
+
+  input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  input#title {
+    height: 30px;
+  }
+
+  input#content {
+    height: 100px;
+  }
+
+  &__buttons {
+    display: block;
+    text-align: right;
+    button {
+      height: 40px;
+      margin-left: 1rem;
+    }
+  }
+}

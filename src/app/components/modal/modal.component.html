@@ -1,0 +1,22 @@
+<form class="modal" (ngSubmit)="onSubmit()">
+  <input
+    type="text"
+    name="title"
+    id="title"
+    [(ngModel)]="title"
+    placeholder="Введите заголовок"
+    class="modal-input__title"
+  />
+  <input
+    type="text"
+    name="content"
+    id="content"
+    [(ngModel)]="content"
+    placeholder="Введите запись"
+    class="modal-input__content"
+  />
+  <mat-dialog-actions class="modal__buttons">
+    <button mat-dialog-close class="btn">Отмена</button>
+    <button type="submit" class="btn">Сохранить</button>
+  </mat-dialog-actions>
+</form>
