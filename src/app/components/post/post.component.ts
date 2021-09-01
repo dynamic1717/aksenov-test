@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Post } from 'src/app/Post';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
@@ -38,15 +37,12 @@ export class PostComponent implements OnInit {
       // Вызваем сервис удаления записи и переходим на гл страницу
       this.postService.deletePost(this.selectedId);
       this.router.navigate(['/']);
-      return true;
-    } else {
-      return false;
     }
   }
 
   // Обработка редактирования записи
   onSubmit() {
-    // Присваеваем записи измененные параметры из input
+    // Присваиваем записи измененные параметры из input
     this.post.title = this.title;
     this.post.content = this.content;
     // Вызываем сервис обновления записи

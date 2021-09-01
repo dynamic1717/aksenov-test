@@ -2,19 +2,8 @@
   <a routerLink="/" class="btn">Назад</a>
   <h4 class="post__title">Запись "{{ post.title }}"</h4>
   <form (ngSubmit)="onSubmit()" class="post__form">
-    <input
-      type="text"
-      name="title"
-      id="title"
-      [(ngModel)]="title"
-      value="{{ post.title }}"
-    />
-    <textarea
-      name="content"
-      id="content"
-      [(ngModel)]="content"
-      value="{{ post.content }}"
-    ></textarea>
+    <input type="text" name="title" id="title" [(ngModel)]="title" />
+    <textarea name="content" id="content" [(ngModel)]="content"></textarea>
     <div class="post__buttons">
       <button (click)="onDeletePost()" class="btn btn_danger">Удалить</button>
       <button type="submit" class="btn">Сохранить</button>
